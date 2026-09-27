@@ -1,0 +1,45 @@
+@use '@angular/material' as mat;
+@use './theme-colors' as brand;
+
+@mixin apply() {
+  html {
+    // Passer à `light dark` pour suivre le thème du système
+    color-scheme: light;
+
+    @include mat.theme(
+      (
+        color: (
+          primary: brand.$primary-palette,
+          tertiary: brand.$tertiary-palette,
+        ),
+        typography: Roboto,
+        density: 0,
+      )
+    );
+
+    // Contraste renforcé quand l'utilisateur le demande à son OS (a11y)
+    @media (prefers-contrast: more) {
+      @include brand.high-contrast-overrides(color-scheme);
+    }
+  }
+
+  // Personnalisation via l'API officielle : jamais de ::ng-deep
+  :root {
+    @include mat.form-field-overrides(
+      (
+        outlined-container-shape: 12px,
+      )
+    );
+    @include mat.button-overrides(
+      (
+        filled-container-shape: 2px,
+        outlined-container-shape: 50px,
+      )
+    );
+    @include mat.card-overrides(
+      (
+        outlined-container-shape: 16px,
+      )
+    );
+  }
+}

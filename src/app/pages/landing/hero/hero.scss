@@ -1,0 +1,9 @@
+.hero {
+      display: grid; gap: 3rem; align-items: center;
+      padding-block: clamp(3rem, 8vw, 6rem);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    }
+h1 { font: var(--mat-sys-display-medium); margin: 0 0 1rem; }
+    .lead { font: var(--mat-sys-title-large); color: var(--mat-sys-on-surface-variant); margin: 0 0 2rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+    img { width: 100%; height: auto; border-radius: var(--mat-sys-corner-extra-large); }

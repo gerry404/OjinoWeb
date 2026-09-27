@@ -1,0 +1,23 @@
+<section class="container hero" aria-labelledby="hero-title">
+    <div>
+        <h1 id="hero-title">Welcome to Ojino !!</h1>
+        <p class="lead">Des revisions plus simples avec Ojino.</p>
+       
+    
+        <div class="actions">
+            <a matButton="filled" 
+                routerLink="/auth/register">
+                commenrcer gratuitement
+                <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+            </a>
+           <a matButton="outlined" routerLink="/" fragment="features">Voir les fonctionnalités</a>
+        </div>
+    </div>
+    <img
+        [src]="'assets/hero.svg'"
+        alt="Illustration of a person using a computer"
+        width="1200"
+        height="900"
+        priority
+        alt="Aperçu du tabeau de bord">
+</section>

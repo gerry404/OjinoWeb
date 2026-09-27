@@ -179,7 +179,10 @@ export const API_URL = new InjectionToken<string>('API_URL', {
 
 > Pourquoi un token plutôt qu'importer `environment` partout ? Parce qu'en test tu fais `{ provide: API_URL, useValue: '/fake' }`, et qu'aucun service ne dépend d'un fichier de build.
 
-### 3.3 Thème Material (M3)
+### 3.3 Thème Material (M3) ✅ fait
+
+> Palette Ojino : primaire `#8FAF9A` (sauge), secondaire `#918F88`, tertiaire `#C47A5A` (terracotta), neutre `#F2EFE9`, neutre variant `#D8D3CA`, erreur `#B84A4A`.
+> Fichiers en place : `src/styles/_theme-colors.scss` (généré, **ne pas éditer à la main**, relance le schematic pour changer une couleur), `src/styles/_theme.scss` et `src/styles.scss`. Le mode contraste élevé s'active via `prefers-contrast: more`.
 
 **Étape 1 : génère tes palettes à partir de ta couleur de marque**
 
