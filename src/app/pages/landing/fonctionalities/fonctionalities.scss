@@ -1,8 +1,6 @@
-.card { height: 100%; }
-    .icon {
-      display: inline-grid; place-items: center; width: 3rem; height: 3rem; margin-bottom: 1rem;
-      border-radius: var(--mat-sys-corner-medium);
-      background: var(--mat-sys-primary-container); color: var(--mat-sys-on-primary-container);
-    }
-    h3 { font: var(--mat-sys-title-medium); margin: 0 0 .5rem; }
-    p { font: var(--mat-sys-body-medium); margin: 0; color: var(--mat-sys-on-surface-variant); }
+.features {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 6vw, 4rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
