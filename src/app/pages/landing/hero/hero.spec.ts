@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { Hero } from './hero';
 
 describe('Hero', () => {
@@ -8,6 +9,8 @@ describe('Hero', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [Hero],
+      // RouterLink injecte ActivatedRoute : sans routeur, le rendu echoue.
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Hero);
